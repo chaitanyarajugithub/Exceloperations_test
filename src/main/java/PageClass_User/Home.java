@@ -1,4 +1,4 @@
-package PageClass;
+package PageClass_User;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -19,7 +19,8 @@ import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
-import PageClass.Ownersandpets;
+
+import PageClass_User.Ownersandpets;
 
 public class PetClinicTest {
   WebDriver driver;
