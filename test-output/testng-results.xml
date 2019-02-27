@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+    <line>
+      <![CDATA[Owner Added success]]>
+    </line>
+    <line>
+      <![CDATA[User information not found]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46022" started-at="2018-12-30T16:22:14Z" finished-at="2018-12-30T16:23:00Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="46022" started-at="2018-12-30T16:22:14Z" finished-at="2018-12-30T16:23:00Z">
+      <class name="MainTestcase.PetClinicTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:MainTestcase.PetClinicTest@3ecd23d9]" name="setUp" is-config="true" duration-ms="15548" started-at="2018-12-30T16:22:14Z" finished-at="2018-12-30T16:22:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="Test1()[pri:0, instance:MainTestcase.PetClinicTest@3ecd23d9]" name="Test1" duration-ms="20549" started-at="2018-12-30T16:22:29Z" description="AddOwnerandpet" finished-at="2018-12-30T16:22:50Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Owner Added success]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test1 -->
+        <test-method status="PASS" signature="Test2()[pri:0, instance:MainTestcase.PetClinicTest@3ecd23d9]" name="Test2" duration-ms="7996" started-at="2018-12-30T16:22:50Z" description="Findowner" finished-at="2018-12-30T16:22:58Z">
+          <reporter-output>
+            <line>
+              <![CDATA[User information not found]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- Test2 -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:MainTestcase.PetClinicTest@3ecd23d9]" name="tearDown" is-config="true" duration-ms="1840" started-at="2018-12-30T16:22:58Z" finished-at="2018-12-30T16:23:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- MainTestcase.PetClinicTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
