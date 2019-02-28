@@ -23,23 +23,23 @@ public class User_Login {
 	
 	public void Loginuser(String email,String password) {
 		
-		
+	if (Signinwithemail.isDisplayed()) {
+		Signinwithemail.click();
+		this.EnterEmail.clear();
+		this.EnterEmail.sendKeys(email);
+		this.EnterPassword.clear();
+		this.EnterPassword.sendKeys(password);
+		this.Signin.click();	
+		}
+	else {
 		this.EnterEmail.clear();
 		this.EnterEmail.sendKeys(email);
 		this.EnterPassword.clear();
 		this.EnterPassword.sendKeys(password);
 		this.Signin.click();		
 		}
-	public void ClickSigninwithemail() {
-		if (Signinwithemail.isDisplayed()) {
-			Signinwithemail.click();
-			
-		}
-		
-		}
-	public void Clickveterinarians() {
+	}
+	public void Mehod2() {
 		
 		}
 	}
-
-
