@@ -26,7 +26,7 @@ These test classes read the input data like user name, password, category names 
 provided in the DataProviderClass to perform actions.
 
 3. Xml files.
- 	1. pom.xml
+ 	1.pom.xml
 Contains all the plugins and dependencies that are required to run the test as maven project. TestNG.xml is configured 
 in this pom.xml to trigger the test.
 
