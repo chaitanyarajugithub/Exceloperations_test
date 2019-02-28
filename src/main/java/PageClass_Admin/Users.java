@@ -38,5 +38,4 @@ public class Users {
 	WebElement confirmpassword;
 	@FindBy(xpath="//input[@value='Update User']")
 	WebElement Updateuser;
-
 }

@@ -18,7 +18,7 @@ public class Admin_Login {
 	@FindBy(xpath="//input[@value='Login']")
 	WebElement AdminLogin;
 	
-	public void Loginuser(String email,String password) {
+	public void Loginadmin(String email,String password) {
 		
 		this.EnterAdminEmail.clear();
 		this.EnterAdminEmail.sendKeys(email);
