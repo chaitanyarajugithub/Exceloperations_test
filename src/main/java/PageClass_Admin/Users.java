@@ -39,21 +39,22 @@ public class Users {
 	WebElement confirmpassword;
 	@FindBy(xpath="//input[@value='Update User']")
 	WebElement Updateuser;
-	
-	public void finduser(String email,String password) {
-		
-			
-		
+
+	public void Clickonusers() {
+		this.Users.click();	
+	}	
+	public void Movetoelement(WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
-	public void updateuser(String email) throws InterruptedException {
-	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Emailsearch);
-		Thread.sleep(5000); 
+	public void finduser(String email) throws InterruptedException {
+		/*((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Emailsearch);
+		Thread.sleep(5000); */
+		Movetoelement(Emailsearch);
 		this.Emailsearch.clear();
 		this.Emailsearch.sendKeys(email);
-		this.Filter.click();
-		
-		
+		this.Filter.click();		
+	}
+	public void updateuser() {
 		
 	}
 }
-
