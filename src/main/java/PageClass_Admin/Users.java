@@ -1,3 +1,8 @@
+/*
+ * @autor : Chaitanya 
+ * 
+ * * 
+ */
 package PageClass_Admin;
 
 import org.openqa.selenium.JavascriptExecutor;
@@ -44,6 +49,7 @@ public class Users {
 		this.Users.click();	
 	}	
 	public void Movetoelement(WebElement element) {
+		//This will scroll until the element is in view
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 	public void finduser(String email) throws InterruptedException {
