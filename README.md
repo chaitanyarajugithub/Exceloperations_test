@@ -90,7 +90,6 @@ Method3 : To Run manually
   • Add TestNG Source jar file.
     http://grepcode.com/project/repo1.maven.org/maven2/org.testng/testng/
   
-  • Download the project, Update the webdriver path in both TestClass and TestClass1.
-    Open the project using IDE and run the TestNG.xml as testng suite to obtain the results.
+  • Download the project,Open the project using IDE and run the TestNG.xml as testng suite to obtain the results.
 
 
