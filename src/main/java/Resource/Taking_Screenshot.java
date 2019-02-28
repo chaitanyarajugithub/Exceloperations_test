@@ -18,7 +18,7 @@ try{
 df=new SimpleDateFormat("dd_MM_yyyy hh_mm_ss");
 d=new Date();
 datef=df.format(d);
-String spath="E:\\Selenium_Atomation6oclock\\Testng_Framework\\Screens\\"+datef+" "+sname+".png";
+String spath="D:\\CHAITU\\Chaitanya_Work\\SaplingData\\workspacesapling\\Exceloperations_test\\Screens\\"+datef+" "+sname+".png";
 File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 FileUtils.copyFile(src, new File(spath));
 	}catch(IOException t)
