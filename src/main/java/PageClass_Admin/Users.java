@@ -53,14 +53,19 @@ public class Users {
 		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 	public void finduser(String email) throws InterruptedException {
-		/*((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", Emailsearch);
-		Thread.sleep(5000); */
 		Movetoelement(Emailsearch);
 		this.Emailsearch.clear();
 		this.Emailsearch.sendKeys(email);
 		this.Filter.click();		
 	}
-	public void updateuser() {
+	public void updateuserpassword(String password) {
+		this.Edit.click();
+		this.password.click();
+		this.password.sendKeys(password);
+		this.confirmpassword.click();
+		this.confirmpassword.sendKeys(password);
+		Movetoelement(Updateuser);
+		this.Updateuser.click();
 		
 	}
 }
