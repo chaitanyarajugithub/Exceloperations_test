@@ -1,5 +1,6 @@
 package PageClass_Admin;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -23,7 +24,7 @@ public class Admin_Login {
 		this.EnterAdminEmail.sendKeys(email);
 		this.EnterAdminPassword.clear();
 		this.EnterAdminPassword.sendKeys(password);
-		this.AdminLogin.click();		
-	
+		this.AdminLogin.click();	
+		
 	}
 }
