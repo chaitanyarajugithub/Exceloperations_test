@@ -1,5 +1,45 @@
 package PageClass_User;
 
-public class User_Login {
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 
-}
+public class User_Login {
+	WebDriver driver;
+	public User_Login(WebDriver driver)
+	{
+	this.driver=driver;
+	}
+	@FindBy(xpath="//div[@class='sign-in-with-email ng-scope']")
+	WebElement Signinwithemail;
+	@FindBy(xpath="//input[@id='input_0']")
+	WebElement EnterEmail;
+	@FindBy(xpath="//input[@id='input_1']")
+	WebElement EnterPassword;
+	@FindBy(xpath="//button[@type='submit']")
+	WebElement Signin;
+	@FindBy(xpath="//a[@class='h6 forgot-password md-accent-color ng-binding md-default-theme']")
+	WebElement forgotpassword;
+	
+	public void Loginuser(String email,String password) {
+		
+		
+		this.EnterEmail.clear();
+		this.EnterEmail.sendKeys(email);
+		this.EnterPassword.clear();
+		this.EnterPassword.sendKeys(password);
+		this.Signin.click();		
+		}
+	public void ClickSigninwithemail() {
+		if (Signinwithemail.isDisplayed()) {
+			Signinwithemail.click();
+			
+		}
+		
+		}
+	public void Clickveterinarians() {
+		
+		}
+	}
+
+
