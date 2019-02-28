@@ -49,7 +49,7 @@ Method1 : To Run as Maven Project locally
 
 2. Install and set up Maven plugin
 
-Clone the project and set webdriver path in both TestClass and TestClass1.
+Clone the project 
 Run as maven project. use below commands to run
 Navigate to the project main folder using terminal or cmd and type below commands
 mvn compile
@@ -60,7 +60,7 @@ mvn test
 Method2 : To Run as Maven Project using Jenkins
 
 3. Install and set up Jenkins
-Fork the project to your account and change webdriver path in both TestClass and TestClass1.
+Fork the project to your account 
 Configure to Jenkins as maven project and build the test.
 
 
