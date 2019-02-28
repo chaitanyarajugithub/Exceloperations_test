@@ -8,7 +8,6 @@
           <include name="Test2"/>
           <include name="setUp"/>
           <include name="tearDown"/>
-          <include name="Test1"/>
         </methods>
       </class> <!-- MainTestcase.PetClinicTest -->
     </classes>
