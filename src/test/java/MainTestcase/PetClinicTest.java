@@ -40,6 +40,7 @@ WebDriver driver;
   Properties p;
   FileInputStream fi;
   String inputpath = "./Data/Input/Sapling Server Credentials.xlsx";
+  
    
   @BeforeTest(enabled = flase)
   public void setUp() throws Exception {
@@ -72,7 +73,7 @@ WebDriver driver;
 	 
 	 
   }
-  @Test(description="ExcelRead",enabled = true)
+  @Test(description="ExcelRead",enabled = flase)
   public void Test3() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
 	
@@ -89,32 +90,24 @@ WebDriver driver;
 			  driver = new ChromeDriver();
 			  driver.get(Url);
 			  Thread.sleep(6000);
-			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
-			  userlogin.Loginuser(Email, Password);
+			 // userlogin.Loginuser(Email, Password);
 			  Thread.sleep(2000);
 			  driver.close();
 	  }
 	  }
   }
   
-  @Test(description="Findowner",enabled = flase)
+  @Test(description="Findowner",enabled = true)
   public void Test2() throws InterruptedException {
-	  Ownersandpets pet=PageFactory.initElements(driver, Ownersandpets.class);
-	  logger = report.startTest("Findowner");
-	  pet.Findowner("Chaitanyatest", "rajutest");
-	  driver.manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-	  WebElement Sucess=driver.findElement(By.xpath("/html/body/div/div/h2[1]"));
-	  WebElement notfound=driver.findElement(By.xpath("/html/body/div/div/h2"));
-	  if(Sucess.getText().contains("Information")) {
-		  Reporter.log("User information found",true);
-		  logger.log(LogStatus.PASS, "Owner found");
-	  }
-	  else if (notfound.getText().contains("Find")) {
-		  Reporter.log("User information not found",true);
-		  logger.log(LogStatus.PASS, "Owner not found");
-	}
+	  driver = new ChromeDriver();
+	  driver.get("https://rock.shr-eng.com/");
+	  Thread.sleep(6000);
+	  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
+	  userlogin.Loginuser("hamza@rock.com", "admin123!");
+	  Thread.sleep(2000);
+	  driver.close();
 	  
-  }
+	}
 
  /* @AfterTest
   public void tearDown() throws Exception {
