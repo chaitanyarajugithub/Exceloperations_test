@@ -74,10 +74,18 @@ WebDriver driver;
   @Test(description="ExcelRead",enabled = true)
   public void Test3() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
+	
 	  for (int i=0; i<5; i++) {
-	  String Url=excel.getCellData(i, 9, 2);
-	  Reporter.log("URL is = "+ Url,true);
-	 // System.out.println(Url);
+		  String Url=excel.getCellData(i, 8, 2);
+		  String UrlAdmin=excel.getCellData(i, 9, 2);
+		  Reporter.log("URL is = "+ Url,true);
+		 // System.out.println(Url);
+		  
+		    for (int j=13; j<18; j++) {
+			  String Email=excel.getCellData(i, j, 2);
+			  String Password=excel.getCellData(i, j, 3);
+			  Reporter.log("Email and password is = "+ Email +"  "+ Password,true);
+	  }
 	  }
   }
   
