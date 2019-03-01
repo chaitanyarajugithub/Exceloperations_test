@@ -6,6 +6,7 @@
 package MainTestcase;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
@@ -29,15 +30,18 @@ import PageClass_Admin.Admin_Login;
 import PageClass_Admin.Users;
 import PageClass_User.Ownersandpets;
 import PageClass_User.User_Login;
+import Resource.ExcelUtilMethods;
 
 public class PetClinicTest {
-  WebDriver driver;
+  private static final boolean flase = false;
+WebDriver driver;
   ExtentReports report;
   ExtentTest logger;
   Properties p;
   FileInputStream fi;
+  String inputpath = "./Data/Input/Sapling Server Credentials.xlsx";
    
-  @BeforeTest
+  @BeforeTest(enabled = flase)
   public void setUp() throws Exception {
 	//phantom JS windows
 	//System.setProperty("phantomjs.binary.path","phantomjs.exe");
@@ -56,7 +60,7 @@ public class PetClinicTest {
     //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
 
-  @Test(description="AddOwnerandpet",enabled = true)
+  @Test(description="AddOwnerandpet",enabled = flase)
   public void Test1() throws InterruptedException {
 	  Admin_Login pet=PageFactory.initElements(driver, Admin_Login.class);
 	  logger=report.startTest("AddownerandPet");
@@ -67,8 +71,17 @@ public class PetClinicTest {
 	 u.finduser("chaita");
 	 
   }
+  @Test(description="ExcelRead",enabled = true)
+  public void Test3() throws InterruptedException, IOException {
+	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
+	  for (int i=0; i<5; i++) {
+	  String Url=excel.getCellData(i, 9, 2);
+	  Reporter.log("URL is = "+ Url,true);
+	 // System.out.println(Url);
+	  }
+  }
   
-  @Test(description="Findowner",enabled = true)
+  @Test(description="Findowner",enabled = flase)
   public void Test2() throws InterruptedException {
 	  Ownersandpets pet=PageFactory.initElements(driver, Ownersandpets.class);
 	  logger = report.startTest("Findowner");
@@ -87,10 +100,10 @@ public class PetClinicTest {
 	  
   }
 
-  @AfterTest
+ /* @AfterTest
   public void tearDown() throws Exception {
 	report.flush();
 	report.endTest(logger);  
     //driver.quit();
-   }
+   }*/
 }

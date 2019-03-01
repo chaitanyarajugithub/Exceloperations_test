@@ -48,9 +48,9 @@ public int getCellCount(String sheetname) throws IOException
 	return cellcount;		
 	}
 //get columns from sheet	
-	public String getCellData(String sheetname, int rownum,int colnum) throws IOException
+	public String getCellData(int i, int rownum,int colnum) throws IOException
 	{
-		ws=wb.getSheet(sheetname);
+		ws=wb.getSheetAt(i);
 		row=ws.getRow(0);
 		String data=ws.getRow(rownum).getCell(colnum).getStringCellValue();
 		return data;
