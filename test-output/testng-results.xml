@@ -1,55 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="1" ignored="2" total="3" passed="0">
   <reporter-output>
-    <line>
-      <![CDATA[URL is = https://ace.shr-eng.com/]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = sarah@test.com  admin123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = danial@test.com  admin123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = tim@ace.com  timace123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = ann@ace.com  annace123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = nick@ace.com  m5Uva+Xw]]>
-    </line>
-    <line>
-      <![CDATA[URL is = http://buzz.shr-eng.com/]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = zaka@buzz.com  zakabuzz123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = junaid@mail.com  admin123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = pparker@rocketship.com  ppbuzz123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = achallis@rocketship.com  annbuzz123!]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = nick@test.com  nickbuzzz123!]]>
-    </line>
-    <line>
-      <![CDATA[URL is = https://rock.shr-eng.com/]]>
-    </line>
-    <line>
-      <![CDATA[Email and password is = hamza@rock.com  admin123!]]>
-    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="222876" started-at="2019-03-01T06:50:27Z" finished-at="2019-03-01T06:54:10Z">
+  <suite name="Default suite" duration-ms="15528" started-at="2019-03-01T07:19:38Z" finished-at="2019-03-01T07:19:54Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="222876" started-at="2019-03-01T06:50:27Z" finished-at="2019-03-01T06:54:10Z">
+    <test name="Default test" duration-ms="15528" started-at="2019-03-01T07:19:38Z" finished-at="2019-03-01T07:19:54Z">
       <class name="MainTestcase.PetClinicTest">
-        <test-method status="FAIL" signature="Test3()[pri:0, instance:MainTestcase.PetClinicTest@e25b2fe]" name="Test3" duration-ms="222801" started-at="2019-03-01T06:50:27Z" description="ExcelRead" finished-at="2019-03-01T06:54:10Z">
+        <test-method status="FAIL" signature="Test2()[pri:0, instance:MainTestcase.PetClinicTest@e25b2fe]" name="Test2" duration-ms="15451" started-at="2019-03-01T07:19:39Z" description="Findowner" finished-at="2019-03-01T07:19:54Z">
           <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
               <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//div[@class='sign-in-with-email ng-scope']"}
@@ -61,7 +19,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'CHAITANYA', ip: '192.168.0.17', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\CHAITA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.119, webStorageEnabled: true}
-Session ID: 5725106d6224b8e62af3e3a323ac1a31
+Session ID: 252727da0866317e34684c8c85ef0f50
 *** Element info: {Using=xpath, value=//div[@class='sign-in-with-email ng-scope']}]]>
             </message>
             <full-stacktrace>
@@ -74,7 +32,7 @@ Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17
 System info: host: 'CHAITANYA', ip: '192.168.0.17', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\CHAITA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 72.0.3626.119, webStorageEnabled: true}
-Session ID: 5725106d6224b8e62af3e3a323ac1a31
+Session ID: 252727da0866317e34684c8c85ef0f50
 *** Element info: {Using=xpath, value=//div[@class='sign-in-with-email ng-scope']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
@@ -96,7 +54,7 @@ at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(Def
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
 at com.sun.proxy.$Proxy8.isDisplayed(Unknown Source)
 at PageClass_User.User_Login.Loginuser(User_Login.java:31)
-at MainTestcase.PetClinicTest.Test3(PetClinicTest.java:92)
+at MainTestcase.PetClinicTest.Test2(PetClinicTest.java:106)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -126,50 +84,8 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
             </full-stacktrace>
           </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
-            <line>
-              <![CDATA[URL is = https://ace.shr-eng.com/]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = sarah@test.com  admin123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = danial@test.com  admin123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = tim@ace.com  timace123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = ann@ace.com  annace123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = nick@ace.com  m5Uva+Xw]]>
-            </line>
-            <line>
-              <![CDATA[URL is = http://buzz.shr-eng.com/]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = zaka@buzz.com  zakabuzz123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = junaid@mail.com  admin123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = pparker@rocketship.com  ppbuzz123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = achallis@rocketship.com  annbuzz123!]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = nick@test.com  nickbuzzz123!]]>
-            </line>
-            <line>
-              <![CDATA[URL is = https://rock.shr-eng.com/]]>
-            </line>
-            <line>
-              <![CDATA[Email and password is = hamza@rock.com  admin123!]]>
-            </line>
           </reporter-output>
-        </test-method> <!-- Test3 -->
+        </test-method> <!-- Test2 -->
       </class> <!-- MainTestcase.PetClinicTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
