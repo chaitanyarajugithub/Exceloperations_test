@@ -70,6 +70,7 @@ WebDriver driver;
 	 Thread.sleep(5000);
 	 u.finduser("chaita");
 	 
+	 
   }
   @Test(description="ExcelRead",enabled = true)
   public void Test3() throws InterruptedException, IOException {
@@ -85,6 +86,13 @@ WebDriver driver;
 			  String Email=excel.getCellData(i, j, 2);
 			  String Password=excel.getCellData(i, j, 3);
 			  Reporter.log("Email and password is = "+ Email +"  "+ Password,true);
+			  driver = new ChromeDriver();
+			  driver.get(Url);
+			  Thread.sleep(6000);
+			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
+			  userlogin.Loginuser(Email, Password);
+			  Thread.sleep(2000);
+			  driver.close();
 	  }
 	  }
   }
