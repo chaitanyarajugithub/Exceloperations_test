@@ -73,7 +73,7 @@ WebDriver driver;
 	 
 	 
   }
-  @Test(description="ExcelRead",enabled = flase)
+  @Test(description="ExcelRead",enabled = true)
   public void Test3() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
 	
@@ -90,17 +90,18 @@ WebDriver driver;
 			  driver = new ChromeDriver();
 			  driver.get(Url);
 			  Thread.sleep(6000);
-			 // userlogin.Loginuser(Email, Password);
+			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
+			  userlogin.Loginuser(Email, Password);
 			  Thread.sleep(2000);
 			  driver.close();
 	  }
 	  }
   }
   
-  @Test(description="Findowner",enabled = true)
+  @Test(description="Findowner",enabled = flase)
   public void Test2() throws InterruptedException {
 	  driver = new ChromeDriver();
-	  driver.get("https://rock.shr-eng.com/");
+	  driver.get("https://ace.shr-eng.com/");
 	  Thread.sleep(6000);
 	  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
 	  userlogin.Loginuser("hamza@rock.com", "admin123!");

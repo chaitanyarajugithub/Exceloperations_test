@@ -8,9 +8,11 @@ package PageClass_User;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class User_Login {
-	WebDriver driver;
+	static WebDriver driver;
 	public User_Login(WebDriver driver)
 	{
 	this.driver=driver;
@@ -27,9 +29,8 @@ public class User_Login {
 	WebElement forgotpassword;
 	
 	public void Loginuser(String email,String password) {
-		
-	if (Signinwithemail.isDisplayed()) {
-		Signinwithemail.click();
+	boolean el = isClickable(Signinwithemail);
+	if (el != true) {
 		this.EnterEmail.clear();
 		this.EnterEmail.sendKeys(email);
 		this.EnterPassword.clear();
@@ -37,6 +38,7 @@ public class User_Login {
 		this.Signin.click();	
 		}
 	else {
+		Signinwithemail.click();
 		this.EnterEmail.clear();
 		this.EnterEmail.sendKeys(email);
 		this.EnterPassword.clear();
@@ -44,7 +46,17 @@ public class User_Login {
 		this.Signin.click();		
 		}
 	}
-	public void Mehod2() {
-		
-		}
+	public static boolean isClickable(WebElement name)      
+	{
+	try
+	{
+	   WebDriverWait wait = new WebDriverWait(driver, 5);
+	   wait.until(ExpectedConditions.elementToBeClickable(name));
+	   return true;
 	}
+	catch (Exception e)
+	{
+	  return false;
+	}
+	}
+}
