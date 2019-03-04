@@ -83,9 +83,10 @@ WebDriver driver;
 		  Reporter.log("URL is = "+ Url,true);
 		 // System.out.println(Url);
 		  
-		    for (int j=13; j<18; j++) {
+		    for (int j=13; j<26; j++) {
 			  String Email=excel.getCellData(i, j, 2);
 			  String Password=excel.getCellData(i, j, 3);
+			  if(Email != null && Email.contains("@")) {
 			  Reporter.log("Email and password is = "+ Email +"  "+ Password,true);
 			  driver = new ChromeDriver();
 			  driver.get(Url);
@@ -94,7 +95,8 @@ WebDriver driver;
 			  userlogin.Loginuser(Email, Password);
 			  Thread.sleep(2000);
 			  driver.close();
-	  }
+			  }
+		  }
 	  }
   }
   
