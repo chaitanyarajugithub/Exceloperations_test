@@ -83,10 +83,12 @@ WebDriver driver;
 		  Reporter.log("URL is = "+ Url,true);
 		 // System.out.println(Url);
 		  
-		    for (int j=13; j<26; j++) {
+		    for (int j=12; j<26; j++) {
 			  String Email=excel.getCellData(i, j, 2);
 			  String Password=excel.getCellData(i, j, 3);
-			  if(Email != null && Email.contains("@")) {
+			  String usertype=excel.getCellData(i, j, 1);
+			  System.out.println(usertype.trim());
+			  if((Email.contains("@")) && !(usertype.trim().equalsIgnoreCase("Active Admin")) && (Email != "empty")) {
 			  Reporter.log("Email and password is = "+ Email +"  "+ Password,true);
 			  driver = new ChromeDriver();
 			  driver.get(Url);
@@ -96,21 +98,31 @@ WebDriver driver;
 			  Thread.sleep(2000);
 			  driver.close();
 			  }
-		  }
+			  else {
+				  System.out.println("Not correct Formats");
+			  }
+		    }			  
 	  }
   }
   
   @Test(description="Findowner",enabled = flase)
   public void Test2() throws InterruptedException {
-	  driver = new ChromeDriver();
+	 /* driver = new ChromeDriver();
 	  driver.get("https://ace.shr-eng.com/");
 	  Thread.sleep(6000);
 	  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
 	  userlogin.Loginuser("hamza@rock.com", "admin123!");
 	  Thread.sleep(2000);
-	  driver.close();
-	  
-	}
+	  driver.close();*/
+	  try {
+		  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
+		  String Email=excel.getCellData(0, 18, 3);
+		  System.out.println(Email);
+		  
+		  } catch (Exception e) {
+	            e.printStackTrace();
+	        }
+	  }
 
  /* @AfterTest
   public void tearDown() throws Exception {

@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.IndexedColors;
 import org.apache.poi.xssf.usermodel.XSSFCell;
 import org.apache.poi.xssf.usermodel.XSSFCellStyle;
@@ -53,6 +55,17 @@ public int getCellCount(String sheetname) throws IOException
 		ws=wb.getSheetAt(i);
 		row=ws.getRow(0);
 		String data=ws.getRow(rownum).getCell(colnum).getStringCellValue();
+		if (data == null) { // use row.getCell(x, Row.CREATE_NULL_AS_BLANK) to avoid null cells
+	        return "empty";
+	    }
+
+	    if (data == "") {
+	        return "empty";
+	    }
+
+	    if (data.trim().isEmpty()) {
+	        return "empty";
+	    }
 		return data;
 	}
 //writing into new File	
