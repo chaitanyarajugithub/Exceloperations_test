@@ -9,7 +9,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,28 +27,25 @@ import com.relevantcodes.extentreports.LogStatus;
 
 import PageClass_Admin.Admin_Login;
 import PageClass_Admin.Users;
-import PageClass_User.Ownersandpets;
 import PageClass_User.User_Login;
 import Resource.ExcelUtilMethods;
 
-public class PetClinicTest {
+public class saplingtest {
   private static final boolean flase = false;
-WebDriver driver;
+  WebDriver driver;
   ExtentReports report;
   ExtentTest logger;
   Properties p;
   FileInputStream fi;
-  String inputpath = "./Data/Input/Sapling Server Credentials.xlsx";
+  String inputpath = "./Data/Input/Sapling Server Credentials.xlsx"; 
   
-   
-  @BeforeTest(enabled = flase)
+ @BeforeTest(enabled = flase)
   public void setUp() throws Exception {
 	//phantom JS windows
 	//System.setProperty("phantomjs.binary.path","phantomjs.exe");
 	//phantom JS Linux
 /*	System.setProperty("phantomjs.binary.path","/usr/bin/phantomjs");
-    driver = new PhantomJSDriver();*/
-	  
+    driver = new PhantomJSDriver();*/	  
 	driver = new ChromeDriver();
     Thread.sleep(5000); 
     report = new ExtentReports("./Reports/PomReport.html");
@@ -60,23 +56,10 @@ WebDriver driver;
 	driver.manage().window().maximize();
     //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
-
-  @Test(description="AddOwnerandpet",enabled = flase)
-  public void Test1() throws InterruptedException {
-	  Admin_Login pet=PageFactory.initElements(driver, Admin_Login.class);
-	  logger=report.startTest("AddownerandPet");
-	 pet.Loginadmin("admin@example.com" , "password");
-	 Users u=PageFactory.initElements(driver, Users.class);
-	 u.Clickonusers();
-	 Thread.sleep(5000);
-	 u.finduser("chaita");
-	 
-	 
-  }
+ 
   @Test(description="ExcelRead",enabled = true)
-  public void Test3() throws InterruptedException, IOException {
-	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
-	
+  public void Test() throws InterruptedException, IOException {
+	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);	
 	  for (int i=0; i<5; i++) {
 		  String Url=excel.getCellData(i, 8, 2);
 		  String UrlAdmin=excel.getCellData(i, 9, 2);
@@ -101,10 +84,9 @@ WebDriver driver;
 			  else {
 				  System.out.println("Not correct Formats");
 			  }
-		    }			  
+		  }			  
 	  }
   }
-  
   @Test(description="Findowner",enabled = flase)
   public void Test2() throws InterruptedException {
 	 /* driver = new ChromeDriver();
