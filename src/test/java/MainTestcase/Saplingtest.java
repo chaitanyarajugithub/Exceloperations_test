@@ -26,7 +26,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import PageClass_User.User_Login;
 import Resource.ExcelUtilMethods;
 
-public class saplingtest {
+public class Saplingtest {
   private static final boolean flase = false;
   WebDriver driver;
   ExtentReports report;
