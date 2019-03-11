@@ -23,10 +23,6 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
-
-import PageClass_Admin.Admin_Login;
-import PageClass_Admin.Users;
 import PageClass_User.User_Login;
 import Resource.ExcelUtilMethods;
 
