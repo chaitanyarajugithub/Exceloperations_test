@@ -74,6 +74,14 @@ public class Saplingtest {
 			  Thread.sleep(6000);
 			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
 			  userlogin.Loginuser(Email, Password);
+			  Thread.sleep(10000);
+			  if(driver.getCurrentUrl().contains("updates")) {
+				  System.out.println("login sucsess");
+			  }
+			  else {
+				  System.out.println("login failed");
+				  
+			  }
 			  Thread.sleep(2000);
 			  driver.close();
 			  }
