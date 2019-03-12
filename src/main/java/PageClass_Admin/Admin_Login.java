@@ -14,18 +14,18 @@ public class Admin_Login {
 	{
 	this.driver=driver;
 	}
-	@FindBy(xpath="//input[@name='admin_user[email]']")
+	@FindBy(xpath="//*[@name='admin_user[email]']")
 	WebElement EnterAdminEmail;
-	@FindBy(xpath="//input[@id='admin_user_password']")
+	@FindBy(xpath="//*[@name='admin_user[password]']")
 	WebElement EnterAdminPassword;
 	@FindBy(xpath="//input[@value='Login']")
 	WebElement AdminLogin;
 	
 	public void Loginadmin(String email,String password) {
 		
-		this.EnterAdminEmail.clear();
+		//this.EnterAdminEmail.clear();
 		this.EnterAdminEmail.sendKeys(email);
-		this.EnterAdminPassword.clear();
+		//this.EnterAdminPassword.clear();
 		this.EnterAdminPassword.sendKeys(password);
 		this.AdminLogin.click();	
 		
