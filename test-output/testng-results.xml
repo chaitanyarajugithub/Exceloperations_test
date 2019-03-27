@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="1" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="40376" started-at="2019-03-27T10:39:47Z" finished-at="2019-03-27T10:40:27Z">
+  <suite name="Default suite" duration-ms="42085" started-at="2019-03-27T10:44:48Z" finished-at="2019-03-27T10:45:30Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="40376" started-at="2019-03-27T10:39:47Z" finished-at="2019-03-27T10:40:27Z">
+    <test name="Default test" duration-ms="42085" started-at="2019-03-27T10:44:48Z" finished-at="2019-03-27T10:45:30Z">
       <class name="MainTestcase.Saplingtest">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="beforeTest" is-config="true" duration-ms="8850" started-at="2019-03-27T10:39:47Z" finished-at="2019-03-27T10:39:56Z">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="beforeTest" is-config="true" duration-ms="9429" started-at="2019-03-27T10:44:48Z" finished-at="2019-03-27T10:44:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="Test2()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="Test2" duration-ms="31473" started-at="2019-03-27T10:39:56Z" description="Findowner" finished-at="2019-03-27T10:40:27Z">
+        <test-method status="PASS" signature="Test2()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="Test2" duration-ms="32609" started-at="2019-03-27T10:44:57Z" description="Findowner" finished-at="2019-03-27T10:45:30Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Test2 -->
