@@ -48,7 +48,7 @@ public class Saplingtest {
     //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
  
-  @Test(description="ExcelRead",enabled = true)
+  @Test(description="ExcelRead",enabled = flase)
   public void Test() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);	
 	  for (int i=2; i<5; i++) {
@@ -121,8 +121,34 @@ public class Saplingtest {
 		  }			  
 	  }
   }
-  @Test(description="Findowner",enabled = flase)
+  @BeforeTest
+  public void beforeTest() throws IOException {
+	  driver =new ChromeDriver();
+	  p =new Properties();
+	  fi =new FileInputStream(".\\Data\\Input\\Newuserdata.properties");
+	  p.load(fi);
+	  driver.get(p.getProperty("objurl"));
+	  driver.manage().window().maximize();
+	  
+  }
+  @Test(description="Findowner",enabled = true)
   public void Test2() throws InterruptedException {
+	 // driver = new ChromeDriver();
+	 // driver.get("https://ace.shr-eng.com/admin");
+	  Admin_Login admin=PageFactory.initElements(driver, Admin_Login.class);
+	  Users users=PageFactory.initElements(driver, Users.class);
+	  Thread.sleep(6000);
+	  admin.Loginadmin("admin@example.com", "password");
+	  Thread.sleep(6000);
+	  users.Clickonusers();
+	  Thread.sleep(6000);
+	  users.CreateUser(p.getProperty("title"), p.getProperty("firstname"),
+			  p.getProperty("lastname"),
+			  p.getProperty("password"), p.getProperty("email"),
+			  p.getProperty("personalemail"), p.getProperty("onboardemail"),
+			  p.getProperty("comapny"), p.getProperty("role"),
+			  p.getProperty("startdate"), p.getProperty("currentstage"));
+	 
 	 /* driver = new ChromeDriver();
 	  driver.get("https://ace.shr-eng.com/");
 	  Thread.sleep(6000);
@@ -134,7 +160,7 @@ public class Saplingtest {
 		  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);
 		  String Email=excel.getCellData(0, 18, 3);
 		  System.out.println(Email);
-		  
+		  		  
 		  } catch (Exception e) {
 	            e.printStackTrace();
 	        }
