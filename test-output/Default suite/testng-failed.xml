@@ -5,7 +5,7 @@
     <classes>
       <class name="MainTestcase.Saplingtest">
         <methods>
-          <include name="Test"/>
+          <include name="Test2"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- MainTestcase.Saplingtest -->
