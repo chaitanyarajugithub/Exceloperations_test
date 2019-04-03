@@ -1,6 +1,21 @@
 package Resource;
 
+import java.util.NoSuchElementException;
+import org.openqa.selenium.WebElement;
+
 public class Usefulmethods {
+	
+	public Boolean IsElementPresent(WebElement element)
+    {
+        try
+        {
+            return element.isDisplayed();
+        }
+        catch (NoSuchElementException e)
+        {
+            return false;
+        }
+    }
 	
 	public String Role(String name) {
 	    switch (name) {
