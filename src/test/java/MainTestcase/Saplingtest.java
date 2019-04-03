@@ -11,6 +11,7 @@ import java.util.Properties;
 
 import javax.lang.model.element.Element;
 
+import org.apache.poi.ddf.EscherColorRef.SysIndexProcedure;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -57,7 +58,7 @@ public class Saplingtest {
   @Test(description="ExcelRead",enabled = true)
   public void Test() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);	
-	  for (int i=2; i<5; i++) {
+	  for (int i=3; i<5; i++) {
 		  String Url=excel.getCellData(i, 8, 2);
 		  String UrlAdmin=excel.getCellData(i, 9, 2);
 		  String adminemail1=excel.getCellData(i, 12, 2);
@@ -76,7 +77,7 @@ public class Saplingtest {
 			  Reporter.log("Email and password is = "+ Email +"  "+ Password,true);
 			  driver = new ChromeDriver();
 			  driver.get(Url);
-			  Thread.sleep(6000);
+			  Thread.sleep(3000);
 			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
 			  userlogin.Loginuser(Email, Password);
 			  Thread.sleep(10000);
@@ -88,36 +89,39 @@ public class Saplingtest {
 				  driver.get(UrlAdmin);
 				  Admin_Login admin=PageFactory.initElements(driver, Admin_Login.class);
 				  Users users=PageFactory.initElements(driver, Users.class);
-				  Thread.sleep(6000);
+				  Thread.sleep(3000);
 				  admin.Loginadmin(adminemail1, adminpass1);
-				  Thread.sleep(10000);
+				  Thread.sleep(7000);
 				  if(driver.getCurrentUrl().contains("dashboard")){
-					  Thread.sleep(6000);
+					  Thread.sleep(3000);
 					  users.Clickonusers();
-					  Thread.sleep(6000);
+					  Thread.sleep(3000);
 					  users.finduser(Email);
-					  WebElement editbutton =  driver.findElement(By.xpath("\"//a[@title='Edit']\""));
-					  if(editbutton.isDisplayed()) {
-					  Thread.sleep(6000);
+					  // unused code
+					  Boolean isPresent = driver.findElements(By.xpath("//a[@title='Edit']")).size()<0;
+					  System.out.println(isPresent);
+					  if(!isPresent == flase) {
+					  Thread.sleep(4000);
 					  users.updateuserpassword(Password);
 					  }else {
 						  Usefulmethods Methods = new Usefulmethods();
 						  String role=Methods.Role(usertype);
 						  users.Clickonusers();
-						  users.CreateUser("Mr", "AUTO", "Create", Password, Email, Email, "Personal", "Ace", role, "2019-03-27", "Active");
+						  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", "Rocketship", role, "2019-03-27", "active");
 					  }
 				  }
 				  else {
 					  System.out.println("Active Admin login 1 failed");
-					  Thread.sleep(6000);
+					  driver.get(UrlAdmin);
+					  Thread.sleep(4000);
 					  admin.Loginadmin(adminemail2, adminpass2);
-					  Thread.sleep(10000);
+					  Thread.sleep(7000);
 					  if(driver.getCurrentUrl().contains("dashboard")){
-						  Thread.sleep(6000);
+						  Thread.sleep(3000);
 						  users.Clickonusers();
-						  Thread.sleep(6000);
+						  Thread.sleep(3000);
 						  users.finduser(Email);
-						  Thread.sleep(6000);
+						  Thread.sleep(3000);
 						  users.updateuserpassword(Password);
 						 }
 					  else {
@@ -135,7 +139,7 @@ public class Saplingtest {
 		  }			  
 	  }
   }
-  @BeforeTest
+  @BeforeTest(enabled = flase)
   public void beforeTest() throws IOException {
 	  driver =new ChromeDriver();
 	  p =new Properties();
