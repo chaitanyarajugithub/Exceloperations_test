@@ -58,7 +58,7 @@ public class Saplingtest {
   @Test(description="ExcelRead",enabled = true)
   public void Test() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);	
-	  for (int i=3; i<5; i++) {
+	  for (int i=0; i<5; i++) {
 		  String Url=excel.getCellData(i, 8, 2);
 		  String UrlAdmin=excel.getCellData(i, 9, 2);
 		  String adminemail1=excel.getCellData(i, 12, 2);
@@ -97,14 +97,15 @@ public class Saplingtest {
 					  users.Clickonusers();
 					  Thread.sleep(3000);
 					  users.finduser(Email);
-					  // unused code
+					  /*//unused code
 					  Boolean isPresent = driver.findElements(By.xpath("//a[@title='Edit']")).size()<0;
-					  System.out.println(isPresent);
-					  if(!isPresent == flase) {
+					  System.out.println(isPresent);*/
+					  WebElement pre = driver.findElement(By.xpath("//a[@title='Edit']"));
+					  Usefulmethods Methods = new Usefulmethods();
+					  if(Methods.IsElementPresent(pre) != false) {
 					  Thread.sleep(4000);
 					  users.updateuserpassword(Password);
 					  }else {
-						  Usefulmethods Methods = new Usefulmethods();
 						  String role=Methods.Role(usertype);
 						  users.Clickonusers();
 						  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", "Rocketship", role, "2019-03-27", "active");
@@ -122,7 +123,16 @@ public class Saplingtest {
 						  Thread.sleep(3000);
 						  users.finduser(Email);
 						  Thread.sleep(3000);
+						  WebElement pre = driver.findElement(By.xpath("//a[@title='Edit']"));
+						  Usefulmethods Methods = new Usefulmethods();
+						  if(Methods.IsElementPresent(pre) == true) {
+						  Thread.sleep(4000);
 						  users.updateuserpassword(Password);
+						  }else {
+							  String role=Methods.Role(usertype);
+							  users.Clickonusers();
+							  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", "Rocketship", role, "2019-03-27", "active");
+						  }
 						 }
 					  else {
 						  System.out.println("Active Admin login 2 failed");
