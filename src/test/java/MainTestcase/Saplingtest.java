@@ -8,7 +8,12 @@ package MainTestcase;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Properties;
+
+import javax.lang.model.element.Element;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Reporter;
@@ -20,6 +25,7 @@ import PageClass_Admin.Admin_Login;
 import PageClass_Admin.Users;
 import PageClass_User.User_Login;
 import Resource.ExcelUtilMethods;
+import Resource.Usefulmethods;
 
 public class Saplingtest {
   private static final boolean flase = false;
@@ -48,7 +54,7 @@ public class Saplingtest {
     //driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
   }
  
-  @Test(description="ExcelRead",enabled = flase)
+  @Test(description="ExcelRead",enabled = true)
   public void Test() throws InterruptedException, IOException {
 	  ExcelUtilMethods excel= new ExcelUtilMethods(inputpath);	
 	  for (int i=2; i<5; i++) {
@@ -90,8 +96,16 @@ public class Saplingtest {
 					  users.Clickonusers();
 					  Thread.sleep(6000);
 					  users.finduser(Email);
+					  WebElement editbutton =  driver.findElement(By.xpath("\"//a[@title='Edit']\""));
+					  if(editbutton.isDisplayed()) {
 					  Thread.sleep(6000);
 					  users.updateuserpassword(Password);
+					  }else {
+						  Usefulmethods Methods = new Usefulmethods();
+						  String role=Methods.Role(usertype);
+						  users.Clickonusers();
+						  users.CreateUser("Mr", "AUTO", "Create", Password, Email, Email, "Personal", "Ace", role, "2019-03-27", "Active");
+					  }
 				  }
 				  else {
 					  System.out.println("Active Admin login 1 failed");
@@ -131,7 +145,7 @@ public class Saplingtest {
 	  driver.manage().window().maximize();
 	  
   }
-  @Test(description="Findowner",enabled = true)
+  @Test(description="Findowner",enabled = flase)
   public void Test2() throws InterruptedException {
 	 // driver = new ChromeDriver();
 	 // driver.get("https://ace.shr-eng.com/admin");

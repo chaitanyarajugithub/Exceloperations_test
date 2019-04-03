@@ -85,8 +85,8 @@ public class Users {
 		this.Users.click();	
 	}	
 	public void Movetoelement(WebElement element) {
-		//This will scroll until the element is in view
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+	//This will scroll until the element is in view
+	((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	}
 	public void selectbytext(WebElement elementname ,String text)
 	{
@@ -131,6 +131,6 @@ public class Users {
 		this.user_start_date.sendKeys(startdate);
 		this.user_start_date.sendKeys(Keys.ESCAPE);
 		selectbytext(user_current_stage, currentstage);
-		//this.CreateUser.click();
+		this.CreateUser.click();
 	}
 }
