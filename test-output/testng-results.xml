@@ -2,44 +2,68 @@
 <testng-results skipped="0" failed="1" ignored="1" total="2" passed="0">
   <reporter-output>
     <line>
-      <![CDATA[URL is = https://ace.shr-eng.com/]]>
+      <![CDATA[URL is = http://buzz.shr-eng.com/]]>
     </line>
     <line>
-      <![CDATA[Email and password is = nick@ace.com  admin123!]]>
+      <![CDATA[Email and password is = zaka@buzz.com  zakabuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = junaid@mail.com  admin123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = pparker@rocketship.com  ppbuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = achallis@rocketship.com  annbuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = nick@test.com  nickbuzzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = junaid@buzz.com  junaidbuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = zaka@mail.com  zakabuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = peter@test.com  ppbuzz123!]]>
+    </line>
+    <line>
+      <![CDATA[Email and password is = cbowman@rocketship.com  bowbuzz123!]]>
     </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="28680" started-at="2019-04-03T12:19:41Z" finished-at="2019-04-03T12:20:09Z">
+  <suite name="Default suite" duration-ms="464893" started-at="2019-04-04T12:21:43Z" finished-at="2019-04-04T12:29:28Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="28680" started-at="2019-04-03T12:19:41Z" finished-at="2019-04-03T12:20:09Z">
+    <test name="Default test" duration-ms="464893" started-at="2019-04-04T12:21:43Z" finished-at="2019-04-04T12:29:28Z">
       <class name="MainTestcase.Saplingtest">
-        <test-method status="FAIL" signature="Test()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="Test" duration-ms="28571" started-at="2019-04-03T12:19:41Z" description="ExcelRead" finished-at="2019-04-03T12:20:09Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="Test()[pri:0, instance:MainTestcase.Saplingtest@e25b2fe]" name="Test" duration-ms="464784" started-at="2019-04-04T12:21:43Z" description="ExcelRead" finished-at="2019-04-04T12:29:28Z">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[unknown error: cannot determine loading status
-from unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='user[password]']"}
   (Session info: chrome=73.0.3683.86)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'CHAITANYA', ip: '192.168.0.17', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\CHAITA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: 874e71f3866813d5c0ba17aa7dbb1eee]]>
+Session ID: d7a6ab07069a152e6f892b9455beae92
+*** Element info: {Using=xpath, value=//input[@name='user[password]']}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//input[@name='user[password]']"}
   (Session info: chrome=73.0.3683.86)
   (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 6.3.9600 x86_64) (WARNING: The server did not provide any stacktrace information)
 Command duration or timeout: 0 milliseconds
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
 System info: host: 'CHAITANYA', ip: '192.168.0.17', os.name: 'Windows 8.1', os.arch: 'amd64', os.version: '6.3', java.version: '1.8.0_101'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, acceptSslCerts: false, applicationCacheEnabled: false, browserConnectionEnabled: false, browserName: chrome, chrome: {chromedriverVersion: 2.40.565498 (ea082db3280dd6..., userDataDir: C:\Users\CHAITA~1\AppData\L...}, cssSelectorsEnabled: true, databaseEnabled: false, handlesAlerts: true, hasTouchScreen: false, javascriptEnabled: true, locationContextEnabled: true, mobileEmulationEnabled: false, nativeEvents: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: XP, platformName: XP, rotatable: false, setWindowRect: true, takesHeapSnapshot: true, takesScreenshot: true, unexpectedAlertBehaviour: , unhandledPromptBehavior: , version: 73.0.3683.86, webStorageEnabled: true}
-Session ID: 874e71f3866813d5c0ba17aa7dbb1eee
+Session ID: d7a6ab07069a152e6f892b9455beae92
+*** Element info: {Using=xpath, value=//input[@name='user[password]']}
 at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
 at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
@@ -52,8 +76,15 @@ at org.openqa.selenium.remote.http.AbstractHttpResponseCodec.decode(AbstractHttp
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-at MainTestcase.Saplingtest.Test(Saplingtest.java:79)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at com.sun.proxy.$Proxy8.click(Unknown Source)
+at PageClass_Admin.Users.updateuserpassword(Users.java:104)
+at MainTestcase.Saplingtest.Test(Saplingtest.java:110)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -81,13 +112,37 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
             <line>
-              <![CDATA[URL is = https://ace.shr-eng.com/]]>
+              <![CDATA[URL is = http://buzz.shr-eng.com/]]>
             </line>
             <line>
-              <![CDATA[Email and password is = nick@ace.com  admin123!]]>
+              <![CDATA[Email and password is = zaka@buzz.com  zakabuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = junaid@mail.com  admin123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = pparker@rocketship.com  ppbuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = achallis@rocketship.com  annbuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = nick@test.com  nickbuzzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = junaid@buzz.com  junaidbuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = zaka@mail.com  zakabuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = peter@test.com  ppbuzz123!]]>
+            </line>
+            <line>
+              <![CDATA[Email and password is = cbowman@rocketship.com  bowbuzz123!]]>
             </line>
           </reporter-output>
         </test-method> <!-- Test -->
