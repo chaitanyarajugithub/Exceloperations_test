@@ -79,6 +79,8 @@ public class Saplingtest {
 			  driver.get(Url);
 			  Thread.sleep(3000);
 			  User_Login userlogin=PageFactory.initElements(driver, User_Login.class);
+			  Usefulmethods Methods = new Usefulmethods();
+			  String companyname = Methods.Company(UrlAdmin);
 			  userlogin.Loginuser(Email, Password);
 			  Thread.sleep(10000);
 			  if(driver.getCurrentUrl().contains("updates")) {
@@ -87,6 +89,7 @@ public class Saplingtest {
 			  else {
 				  System.out.println("user login failed");
 				  driver.get(UrlAdmin);
+				  driver.manage().window().maximize();
 				  Admin_Login admin=PageFactory.initElements(driver, Admin_Login.class);
 				  Users users=PageFactory.initElements(driver, Users.class);
 				  Thread.sleep(3000);
@@ -100,15 +103,15 @@ public class Saplingtest {
 					  /*//unused code
 					  Boolean isPresent = driver.findElements(By.xpath("//a[@title='Edit']")).size()<0;
 					  System.out.println(isPresent);*/
-					  WebElement pre = driver.findElement(By.xpath("//a[@title='Edit']"));
-					  Usefulmethods Methods = new Usefulmethods();
-					  if(Methods.IsElementPresent(pre) != false) {
+					  //WebElement pre = driver.findElement(By.xpath("//a[@title='Edit']"));
+					  
+					  if(driver.getPageSource().contains("edit")) {
 					  Thread.sleep(4000);
 					  users.updateuserpassword(Password);
 					  }else {
 						  String role=Methods.Role(usertype);
 						  users.Clickonusers();
-						  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", "Rocketship", role, "2019-03-27", "active");
+						  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", companyname, role, "2019-03-27", "active");
 					  }
 				  }
 				  else {
@@ -123,15 +126,18 @@ public class Saplingtest {
 						  Thread.sleep(3000);
 						  users.finduser(Email);
 						  Thread.sleep(3000);
-						  WebElement pre = driver.findElement(By.xpath("//a[@title='Edit']"));
-						  Usefulmethods Methods = new Usefulmethods();
-						  if(Methods.IsElementPresent(pre) == true) {
+						 // WebElement pre = driver.findElement(By.linkText("Edit"));
+						  //Usefulmethods Methods = new Usefulmethods();
+						  System.out.println(driver.getPageSource().contains("edit"));
+						  //System.out.println(Methods.Textpresent("edit"));
+						  
+						  if(driver.getPageSource().contains("edit")) {
 						  Thread.sleep(4000);
 						  users.updateuserpassword(Password);
 						  }else {
 							  String role=Methods.Role(usertype);
 							  users.Clickonusers();
-							  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", "Rocketship", role, "2019-03-27", "active");
+							  users.CreateUser("Mr", "AUTO", usertype , Password, Email, Email, "Personal", companyname, role, "2019-03-27", "active");
 						  }
 						 }
 					  else {
